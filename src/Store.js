@@ -12,7 +12,12 @@ const middleware = applyMiddleware(thunk, promise, logger);
 const Store = createStore(
     RootReducer,
     compose(
-        middleware
+        middleware,
+        devTools({
+            name: Platform.OS,
+            hostname: 'lolcahost',
+            port: 5678
+        }),
     )
 );
 
