@@ -12,12 +12,7 @@ const middleware = applyMiddleware(thunk, promise, logger);
 const Store = createStore(
     RootReducer,
     compose(
-        middleware,
-        devTools({
-            name: Platform.OS,
-            hostname: 'localhost',
-            port : 5678
-        }),
+        middleware
     )
 );
 
