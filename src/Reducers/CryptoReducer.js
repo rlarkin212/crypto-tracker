@@ -1,15 +1,20 @@
-import { FETCHING_COIN_DATA, FETCHING_COIN_DATA_SUCCESS, FETCHING_COIN_DATA_FAIL } from './../Utils/ActionTypes';
+import {
+    FETCHING_COIN_DATA,
+    FETCHING_COIN_DATA_SUCCESS,
+    FETCHING_COIN_DATA_FAIL,
+} from './../Utils/ActionTypes';
 
 const initialState = {
     isFetching: null,
     data: [],
     hasError: false,
-    errorMessage: null
+    errorMessage: null,
 };
 
+export default function (state = initialState, action) {
 
-export default function (state = [], action) {
     switch (action.type) {
+
         case FETCHING_COIN_DATA:
             return Object.assign({}, state, {
                 isFetching: true,
@@ -31,11 +36,12 @@ export default function (state = [], action) {
                 isFetching: false,
                 data: action.payload,
                 hasError: true,
-                errorMessage: action.er
+                errorMessage: action.err
             });
+
 
         default:
             return state;
-
     }
+
 }
