@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "expo": "^25.0.0",
+    "hoek": "^5.0.3",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-native-loading-spinner-overlay": "^0.5.2",
